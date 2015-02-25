@@ -3,4 +3,15 @@
 
 body {
 	font-size: 62.5%;
+
+  .task_maps {
+   .task_map {
+     width: 40%;
+     display: inline-block;
+     img {
+       width: 30%;
+       height: 30%;
+     }
+   }
+  }
 }
