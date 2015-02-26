@@ -2,16 +2,34 @@
 @import "compass/css3";
 
 body {
-	font-size: 62.5%;
-
+  font-size: 62.5%;
   .task_maps {
-   .task_map {
-     width: 40%;
-     display: inline-block;
-     img {
-       width: 30%;
-       height: 30%;
-     }
-   }
+    position: relative;
+    margin-left: 8%;
+    .light_box {
+      width: 60%;
+      position: absolute;
+      margin-top: auto;
+      margin-bottom: auto;
+      display: none;
+    }
+    .task_map {
+      float: left;
+      border-style: dashed;
+      border-width: 20px;
+      border-color: white;
+      width: 45%;
+      display: inline-block;
+      .img_unclicked {
+        width: 30%;
+        height: 30%;
+        opacity: 0.4;
+      }
+      .img_clicked {
+        width: 30%;
+        height: 30%;
+        opacity: 1.0;
+      }
+    }
   }
 }

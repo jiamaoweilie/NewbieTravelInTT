@@ -11,51 +11,79 @@
 </head>
 <body>
 <section class="information"></section>
-<section class="task_maps">
+<section id="taskMaps" class="task_maps">
     <section class="project task_map">
-        <img src="image/sample.jpg" alt=""/>
-        <img src="image/sample.jpg" alt=""/>
-        <img src="image/sample.jpg" alt=""/>
-        <img src="image/sample.jpg" alt=""/>
-        <img src="image/sample.jpg" alt=""/>
-        <img src="image/sample.jpg" alt=""/>
-        <img src="image/sample.jpg" alt=""/>
-        <img src="image/sample.jpg" alt=""/>
-        <img src="image/sample.jpg" alt=""/>
+        <img src="image/sample.jpg" alt="" class="img_unclicked"/>
+        <img src="image/sample.jpg" alt="" class="img_unclicked"/>
+        <img src="image/sample.jpg" alt="" class="img_unclicked"/>
+        <img src="image/sample.jpg" alt="" class="img_unclicked"/>
+        <img src="image/sample.jpg" alt="" class="img_unclicked"/>
+        <img src="image/sample.jpg" alt="" class="img_unclicked"/>
+        <img src="image/sample.jpg" alt="" class="img_unclicked"/>
+        <img src="image/sample.jpg" alt="" class="img_unclicked"/>
+        <img src="image/sample.jpg" alt="" class="img_unclicked"/>
     </section>
     <section class="tech_map task_map">
-        <img src="image/sample.jpg" alt=""/>
-        <img src="image/sample.jpg" alt=""/>
-        <img src="image/sample.jpg" alt=""/>
-        <img src="image/sample.jpg" alt=""/>
-        <img src="image/sample.jpg" alt=""/>
-        <img src="image/sample.jpg" alt=""/>
-        <img src="image/sample.jpg" alt=""/>
-        <img src="image/sample.jpg" alt=""/>
-        <img src="image/sample.jpg" alt=""/>
+        <img src="image/sample.jpg" alt="" class="img_unclicked"/>
+        <img src="image/sample.jpg" alt="" class="img_unclicked"/>
+        <img src="image/sample.jpg" alt="" class="img_unclicked"/>
+        <img src="image/sample.jpg" alt="" class="img_unclicked"/>
+        <img src="image/sample.jpg" alt="" class="img_unclicked"/>
+        <img src="image/sample.jpg" alt="" class="img_unclicked"/>
+        <img src="image/sample.jpg" alt="" class="img_unclicked"/>
+        <img src="image/sample.jpg" alt="" class="img_unclicked"/>
+        <img src="image/sample.jpg" alt="" class="img_unclicked"/>
     </section>
     <section class="process_map task_map">
-        <img src="image/sample.jpg" alt=""/>
-        <img src="image/sample.jpg" alt=""/>
-        <img src="image/sample.jpg" alt=""/>
-        <img src="image/sample.jpg" alt=""/>
-        <img src="image/sample.jpg" alt=""/>
-        <img src="image/sample.jpg" alt=""/>
-        <img src="image/sample.jpg" alt=""/>
-        <img src="image/sample.jpg" alt=""/>
-        <img src="image/sample.jpg" alt=""/>
+        <img src="image/sample.jpg" alt="" class="img_unclicked"/>
+        <img src="image/sample.jpg" alt="" class="img_unclicked"/>
+        <img src="image/sample.jpg" alt="" class="img_unclicked"/>
+        <img src="image/sample.jpg" alt="" class="img_unclicked"/>
+        <img src="image/sample.jpg" alt="" class="img_unclicked"/>
+        <img src="image/sample.jpg" alt="" class="img_unclicked"/>
+        <img src="image/sample.jpg" alt="" class="img_unclicked"/>
+        <img src="image/sample.jpg" alt="" class="img_unclicked"/>
+        <img src="image/sample.jpg" alt="" class="img_unclicked"/>
     </section>
     <section class="communication_map task_map">
-        <img src="image/sample.jpg" alt=""/>
-        <img src="image/sample.jpg" alt=""/>
-        <img src="image/sample.jpg" alt=""/>
-        <img src="image/sample.jpg" alt=""/>
-        <img src="image/sample.jpg" alt=""/>
-        <img src="image/sample.jpg" alt=""/>
-        <img src="image/sample.jpg" alt=""/>
-        <img src="image/sample.jpg" alt=""/>
-        <img src="image/sample.jpg" alt=""/>
+        <img src="image/sample.jpg" alt="" class="img_unclicked"/>
+        <img src="image/sample.jpg" alt="" class="img_unclicked"/>
+        <img src="image/sample.jpg" alt="" class="img_unclicked"/>
+        <img src="image/sample.jpg" alt="" class="img_unclicked"/>
+        <img src="image/sample.jpg" alt="" class="img_unclicked"/>
+        <img src="image/sample.jpg" alt="" class="img_unclicked"/>
+        <img src="image/sample.jpg" alt="" class="img_unclicked"/>
+        <img src="image/sample.jpg" alt="" class="img_unclicked"/>
+        <img src="image/sample.jpg" alt="" class="img_unclicked"/>
+    </section>
+    <section id="lightBox" class="light_box">
+        <img src="image/sample.jpg" alt="" class="lb_img">
+        <br>
+        <input type="button" id="yesBtn" value="Yes">
+        <input type="button" id="noBtn" value="No">
     </section>
 </section>
+<script type="text/javascript" src="jquery-2.1.3.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+    $("#taskMaps img").bind("click", function(e){
+        e.preventDefault();
+        $("#lightBox").fadeIn("slow");
+        if (this.className == "img_unclicked") {
+            this.className = "img_clicked";
+        } else {
+            this.className = "img_unclicked";
+        }
+    });
+    $("#yesBtn").bind("click", function(e){
+        e.preventDefault();
+        $("#lightBox").fadeOut("slow");
+    });
+    $("#noBtn").bind("click", function(e){
+        e.preventDefault();
+        $("#lightBox").fadeOut("slow");
+    });
+});
+</script>
 </body>
 </html>
