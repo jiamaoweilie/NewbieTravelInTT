@@ -1,7 +1,7 @@
 var taskMaps = {
 
 	initialize: function() {
-		$("#taskMaps img").bind("click", function(e){
+		$("#sect-task-maps img").bind("click", function(e){
 			var that = this;
 
 	        e.preventDefault();

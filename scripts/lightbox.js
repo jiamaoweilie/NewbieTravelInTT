@@ -1,18 +1,18 @@
 var lightbox = {
 
 	openLightbox: function(taskMapImg) {
-		var yButton = $("#btnAccept");
-		var nButton = $("#btnBack");
+		var yButton = $("#btn-lightbox-accept");
+		var nButton = $("#btn-lightbox-back");
 
-        $("#lightBox").fadeIn("slow");
+        $("#sect-light-box").fadeIn("slow");
         yButton.bind("click", taskMapImg, function(image){
 	        image.preventDefault();
-	        $("#lightBox").fadeOut("slow");
+	        $("#sect-light-box").fadeOut("slow");
 	        image.data.className = "img_clicked";
 	    });
 	    nButton.bind("click", function(e){
 	        e.preventDefault();
-	        $("#lightBox").fadeOut("slow");
+	        $("#sect-light-box").fadeOut("slow");
 	    });
 	}
 

@@ -10,59 +10,56 @@
     <link href="stylesheets/style.css" type="text/css" rel="stylesheet" >
 </head>
 <body>
-<section class="information"></section>
-<section id="taskMaps" class="task_maps">
-    <section class="project task_map">
-        <img src="image/sample.jpg" alt="" class="img_unclicked"/>
-        <img src="image/sample.jpg" alt="" class="img_unclicked"/>
-        <img src="image/sample.jpg" alt="" class="img_unclicked"/>
-        <img src="image/sample.jpg" alt="" class="img_unclicked"/>
-        <img src="image/sample.jpg" alt="" class="img_unclicked"/>
-        <img src="image/sample.jpg" alt="" class="img_unclicked"/>
-        <img src="image/sample.jpg" alt="" class="img_unclicked"/>
-        <img src="image/sample.jpg" alt="" class="img_unclicked"/>
-        <img src="image/sample.jpg" alt="" class="img_unclicked"/>
+<section id="sect-user-info" class="information">
+    <section id="sect-avatar" class="avatar">
+        <img src="image/sample.jpg" alt="" class="img_avatar"/>
     </section>
-    <section class="tech_map task_map">
-        <img src="image/sample.jpg" alt="" class="img_unclicked"/>
-        <img src="image/sample.jpg" alt="" class="img_unclicked"/>
-        <img src="image/sample.jpg" alt="" class="img_unclicked"/>
-        <img src="image/sample.jpg" alt="" class="img_unclicked"/>
-        <img src="image/sample.jpg" alt="" class="img_unclicked"/>
-        <img src="image/sample.jpg" alt="" class="img_unclicked"/>
-        <img src="image/sample.jpg" alt="" class="img_unclicked"/>
-        <img src="image/sample.jpg" alt="" class="img_unclicked"/>
-        <img src="image/sample.jpg" alt="" class="img_unclicked"/>
+    <section id="sect-profile" class="profile">
+        <p>Name: XXX</p>
+        <ul>Honors:<br>
+            <li>FIRST BLOOD</li>
+            <li>DOUBLE KILL</li>
+            <li>TRIBLE KILL</li>
+            <li>RAMPAGE</li>
+        </ul>
     </section>
-    <section class="process_map task_map">
-        <img src="image/sample.jpg" alt="" class="img_unclicked"/>
-        <img src="image/sample.jpg" alt="" class="img_unclicked"/>
-        <img src="image/sample.jpg" alt="" class="img_unclicked"/>
-        <img src="image/sample.jpg" alt="" class="img_unclicked"/>
-        <img src="image/sample.jpg" alt="" class="img_unclicked"/>
-        <img src="image/sample.jpg" alt="" class="img_unclicked"/>
-        <img src="image/sample.jpg" alt="" class="img_unclicked"/>
-        <img src="image/sample.jpg" alt="" class="img_unclicked"/>
-        <img src="image/sample.jpg" alt="" class="img_unclicked"/>
-    </section>
-    <section class="communication_map task_map">
-        <img src="image/sample.jpg" alt="" class="img_unclicked"/>
-        <img src="image/sample.jpg" alt="" class="img_unclicked"/>
-        <img src="image/sample.jpg" alt="" class="img_unclicked"/>
-        <img src="image/sample.jpg" alt="" class="img_unclicked"/>
-        <img src="image/sample.jpg" alt="" class="img_unclicked"/>
-        <img src="image/sample.jpg" alt="" class="img_unclicked"/>
-        <img src="image/sample.jpg" alt="" class="img_unclicked"/>
-        <img src="image/sample.jpg" alt="" class="img_unclicked"/>
-        <img src="image/sample.jpg" alt="" class="img_unclicked"/>
-    </section>
-    <section id="lightBox" class="light_box">
-        <img src="image/sample.jpg" alt="" class="lb_img">
-        <br>
-        <input type="button" id="btnAccept" value="Accept">
-        <input type="button" id="btnBack" value="Back">
+    <section id="sect-tasks-accepted" class="tasks_accepted">
+        <img src="image/sample.jpg" alt="" class="img_task_accepted"/>
+        <img src="image/sample.jpg" alt="" class="img_task_accepted"/>
+        <img src="image/sample.jpg" alt="" class="img_task_accepted"/>
     </section>
 </section>
+
+<section id="sect-task-maps" class="task_maps">
+
+    <section id="sect-project-taskmap" class="project task_map">
+        <span class="task_map_title">Project</span><br>
+        <img src="image/sample.jpg" alt="" class="img_unclicked"/>
+        <img src="image/sample.jpg" alt="" class="img_unclicked"/>
+    </section>
+    <section id="sect-tech-taskmap"class="tech_map task_map">
+        <span class="task_map_title">Tech</span><br>
+        <img src="image/sample.jpg" alt="" class="img_unclicked"/>
+        <img src="image/sample.jpg" alt="" class="img_unclicked"/>
+    </section>
+    <section id="sect-process-taskmap" class="process_map task_map">
+        <span class="task_map_title">Process</span><br>
+        <img src="image/sample.jpg" alt="" class="img_unclicked"/>
+        <img src="image/sample.jpg" alt="" class="img_unclicked"/>
+    </section>
+    <section id="sec-comm-taskmap" class="communication_map task_map">
+        <span class="task_map_title">Communication</span><br>
+        <img src="image/sample.jpg" alt="" class="img_unclicked"/>
+        <img src="image/sample.jpg" alt="" class="img_unclicked"/>
+    </section>
+    <section id="sect-light-box" class="light_box">
+        <img src="image/sample.jpg" alt="" class="img_lightbox">
+        <br>
+        <input type="button" id="btn-lightbox-accept" value="Accept">
+        <input type="button" id="btn-lightbox-back" value="Back">
+    </section>
+</section>
+
 <script type="text/javascript" src="/scripts/libs/jquery-2.1.3.js"></script>
 <script type="text/javascript" src="/scripts/page-init.js"></script>
 <script type="text/javascript" src="/scripts/task-maps.js"></script>
