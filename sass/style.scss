@@ -7,6 +7,7 @@ body {
 }
 
 .information {
+  //position: fixed;
   padding: 10px;
   border: solid;
   border-color: orange;
@@ -19,25 +20,28 @@ body {
 
   .avatar {
     @include flex(1 0);
+    padding: 5px;
     border: dashed;
-    width: 15%;
+    min-width: 15%;
     //height: 100%;
 
     .img_avatar {
-      width: 100%;
+      width: 200px;
     }
   }
 
   .profile {
     border: dashed;
-    margin-left: 20px;
-    margin-right: 20px;
+    padding: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
     font-family: "arial";
     font-weight: bold;
     font-size: 30px;
-    @include flex(2 0);
-    width: 30%;
+    min-width: 30%;
     //height: 100%;
+    @include flex(2 0);
+
     
     li{
       text-indent: 4em;
@@ -49,15 +53,16 @@ body {
 
   .tasks_accepted {
     border: dashed;
-    width: 50%;
+    padding: 5px;
+    min-width: 45%;
     //height: 100%;
     @include flex(3 0);
     
     .img_task_accepted {
-      margin: 1%;
-      margin-right: 1%;
-      width: 30%;
-      hight: 100%;
+      //margin: 5px;
+      margin-right: 5px;
+      width: 200px;
+      //hight: 100%;
     }
   }
 }
@@ -68,53 +73,101 @@ body {
   border: solid;
   border-color: lime;
   @include border-radius(10px);
+
+  @include display-flex;
+  @include flex-wrap(wrap);
+  @include align-items(center);
+  //@include flexbox((display: box));
+
+  .task_map {
+    padding: 5px;
+    border: solid;
+    border-color: blue;
+    @include border-radius(10px);
+    width: 40%;
+    margin: 3%;
+
+    //@include flex(1 0);
+
+    @include display-flex;
+    @include flex-wrap(wrap);
+    align-items: center;
+
+    .task_map_title {
+      //display: block;
+      margin: 3px;
+      min-width: 80%;
+
+      text-align: left;
+      font-family: "arial";
+      font-size: 30px;
+      font-weight: bold;
+      font-variant: small-caps;
+      
+      //@include flex(2 0);
+    }
+
+    .img_unclicked {
+      width: 40%;
+      height: 40%;
+      opacity: 0.4;
+      margin: 5px;
+
+      //@include flex(1 0);
+    }
+    .img_clicked {
+      width: 40%;
+      height: 40%;
+      opacity: 1.0;
+      margin: 5px;
+
+      //@include flex(1 0);
+    }
+  }
 }
 
-.task_map {
-  border: solid;
-  border-color: blue;
-  @include border-radius(10px);
-  float: left;
-  width: 40%;
-  margin: 3%;
-  //display: inline-block;
-}
-
-.task_map_title {
-  display: block;
-  text-align: left;
-  font-family: "arial";
-  font-size: 30px;
-  font-weight: bold;
-  font-variant: small-caps;
-  margin: 3px;
-}
-
-.img_unclicked {
-  width: 48%;
-  height: 48%;
-  opacity: 0.4;
-}
-.img_clicked {
-  width: 48%;
-  height: 48%;
-  opacity: 1.0;
-}
-
-  
 .light_box {
-  width: 40%;
-  height: 40%;
-  position: absolute;
-  margin-top: 0%;
+  min-width: 40%;
+  min-height: 40%;
+  border: solid;
+  border-color: red;
+  @include border-radius(10px);
+  padding: 5px;
+  position: fixed;
+  z-index: 2;
+
+  //text-align: center;
+  margin: 5%;
   margin-left: 29%;
   //margin-right: 30%;
   display: none;
+
+  //@include display-flex;
+  //@include flex-wrap(wrap);
+  //@include flex-direction(vertical);
+
+  .img_lightbox {
+    //@include flex(1 0);
+    width: 60%
+  }
 }
 
-.img_lightbox {
-  width: 100%
+#light-box-bg {
+  display: none;
+  background-color: black;
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0.6;
+  width: 100%;
+  height: 100%;
 }
+
+
+
+
+
 
 
 

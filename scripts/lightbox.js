@@ -5,14 +5,17 @@ var lightbox = {
 		var nButton = $("#btn-lightbox-back");
 
         $("#sect-light-box").fadeIn("slow");
+        $("#light-box-bg").fadeIn("slow");
         yButton.bind("click", taskMapImg, function(image){
 	        image.preventDefault();
 	        $("#sect-light-box").fadeOut("slow");
+	        $("#light-box-bg").fadeOut("slow");
 	        image.data.className = "img_clicked";
 	    });
 	    nButton.bind("click", function(e){
 	        e.preventDefault();
 	        $("#sect-light-box").fadeOut("slow");
+	        $("#light-box-bg").fadeOut("slow");
 	    });
 	}
 
