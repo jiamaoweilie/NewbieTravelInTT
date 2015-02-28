@@ -9,15 +9,19 @@
 	<![endif]-->
     <link href="stylesheets/style.css" type="text/css" rel="stylesheet" >
 </head>
-<body>
+<body >
+    <!-- light box -->
     <section id="sect-light-box" class="light_box">
         <img src="image/sample.jpg" alt="" class="img_lightbox">
         <br>
-        <input type="button" id="btn-lightbox-accept" value="Accept">
-        <input type="button" id="btn-lightbox-back" value="Back">
+        <section id="sect-lightbox-buttons" class="lightbox_button_box">
+            <input type="button" id="btn-lightbox-accept" value="Accept" class="btn_lightbox">
+            <input type="button" id="btn-lightbox-back" value="Back" class="btn_lightbox">
+        </section>
     </section>
     <section id="light-box-bg"></section>
 
+    <!-- newbie information -->
     <section id="sect-user-info" class="information">
         <section id="sect-avatar" class="avatar">
             <img src="image/sample.jpg" alt="" class="img_avatar"/>
@@ -32,35 +36,62 @@
             </ul>
         </section>
         <section id="sect-tasks-accepted" class="tasks_accepted">
-            <img src="image/sample.jpg" alt="" class="img_task_accepted"/>
-            <img src="image/sample.jpg" alt="" class="img_task_accepted"/>
-            <img src="image/sample.jpg" alt="" class="img_task_accepted"/>
+            <span id="count-tasks-accepted" style="display: none" value="0"></span>
+            <section class="accepted_task"></section>
+            <section class="accepted_task"></section>
+            <section class="accepted_task"></section>
         </section>
     </section>
 
+    <!-- task maps -->
     <section id="sect-task-maps" class="task_maps">
         <section id="sect-project-taskmap" class="project task_map">
             <span class="task_map_title">Client</span><br>
-            <img src="image/sample.jpg" alt="" class="img_unclicked"/>
-            <img src="image/sample.jpg" alt="" class="img_unclicked"/>
+            <section id="sect-taskcard-project1" class="task_card">
+                <section class="mark_in_progress">Task in Progress</section>
+                <img src="image/sample.jpg" alt="" class="img_unclicked"/>
+            </section>
+            <section id="sect-taskcard-project2" class="task_card">
+                <section class="mark_in_progress">Task in Progress</section>
+                <img src="image/sample.jpg" alt="" class="img_unclicked"/>
+            </section>
         </section>
         <section id="sect-tech-taskmap"class="tech_map task_map">
             <span class="task_map_title">Technical</span><br>
-            <img src="image/sample.jpg" alt="" class="img_unclicked"/>
-            <img src="image/sample.jpg" alt="" class="img_unclicked"/>
+            <section id="sect-taskcard-tech1" class="task_card">
+                <section class="mark_in_progress">Task in Progress</section>
+                <img src="image/sample.jpg" alt="" class="img_unclicked"/>
+            </section>
+            <section id="sect-taskcard-tech2" class="task_card">
+                <section class="mark_in_progress">Task in Progress</section>
+                <img src="image/sample.jpg" alt="" class="img_unclicked"/>
+            </section>
         </section>
         <section id="sect-process-taskmap" class="process_map task_map">
             <span class="task_map_title">Process</span><br>
-            <img src="image/sample.jpg" alt="" class="img_unclicked"/>
-            <img src="image/sample.jpg" alt="" class="img_unclicked"/>
+            <section id="sect-taskcard-project1" class="task_card">
+                <section class="mark_in_progress">Task in Progress</section>
+                <img src="image/sample.jpg" alt="" class="img_unclicked"/>
+            </section>
+            <section id="sect-taskcard-project2" class="task_card">
+                <section class="mark_in_progress">Task in Progress</section>
+                <img src="image/sample.jpg" alt="" class="img_unclicked"/>
+            </section>
         </section>
         <section id="sec-comm-taskmap" class="communication_map task_map">
             <span class="task_map_title">Communication</span><br>
-            <img src="image/sample.jpg" alt="" class="img_unclicked"/>
-            <img src="image/sample.jpg" alt="" class="img_unclicked"/>
+            <section id="sect-taskcard-project1" class="task_card">
+                <section class="mark_in_progress">Task in Progress</section>
+                <img src="image/sample.jpg" alt="" class="img_unclicked"/>
+            </section>
+            <section id="sect-taskcard-project2" class="task_card">
+                <section class="mark_in_progress">Task in Progress</section>
+                <img src="image/sample.jpg" alt="" class="img_unclicked"/>
+            </section>
         </section>
     </section>
 
+    <!-- scripts -->
     <script type="text/javascript" src="/scripts/libs/jquery-2.1.3.js"></script>
     <script type="text/javascript" src="/scripts/page-init.js"></script>
     <script type="text/javascript" src="/scripts/task-maps.js"></script>

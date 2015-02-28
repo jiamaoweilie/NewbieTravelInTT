@@ -66,13 +66,17 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 /* line 5, ../sass/style.scss */
 body {
   font-size: 62.5%;
+  background: url(image/Main_Page.jpg);
 }
 
-/* line 9, ../sass/style.scss */
+/* line 11, ../sass/style.scss */
 .information {
+  position: relative;
+  z-index: 1;
   padding: 10px;
   border: solid;
   border-color: orange;
+  background-color: orange;
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
   border-radius: 10px;
@@ -80,12 +84,12 @@ body {
   display: flex;
   -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
-  display: -webkit-box;
+  display: -webkit-flex;
   -webkit-flex-direction: row;
-  display: box;
+  display: flex;
   flex-direction: row;
 }
-/* line 21, ../sass/style.scss */
+/* line 29, ../sass/style.scss */
 .information .avatar {
   -webkit-flex: 1 0;
   flex: 1 0;
@@ -93,11 +97,11 @@ body {
   border: dashed;
   min-width: 15%;
 }
-/* line 28, ../sass/style.scss */
+/* line 36, ../sass/style.scss */
 .information .avatar .img_avatar {
-  width: 200px;
+  width: 100%;
 }
-/* line 33, ../sass/style.scss */
+/* line 41, ../sass/style.scss */
 .information .profile {
   border: dashed;
   padding: 5px;
@@ -110,31 +114,47 @@ body {
   -webkit-flex: 2 0;
   flex: 2 0;
 }
-/* line 46, ../sass/style.scss */
+/* line 54, ../sass/style.scss */
 .information .profile li {
   text-indent: 4em;
   font-size: 18px;
   font-weight: normal;
   font-variant: small-caps;
 }
-/* line 54, ../sass/style.scss */
+/* line 62, ../sass/style.scss */
 .information .tasks_accepted {
+  position: relative;
   border: dashed;
   padding: 5px;
   min-width: 45%;
   -webkit-flex: 3 0;
   flex: 3 0;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
 }
-/* line 61, ../sass/style.scss */
-.information .tasks_accepted .img_task_accepted {
+/* line 76, ../sass/style.scss */
+.information .tasks_accepted .accepted_task {
   margin-right: 5px;
-  width: 200px;
+  width: 30%;
+  height: 100%;
+  border: dashed;
+}
+/* line 82, ../sass/style.scss */
+.information .tasks_accepted .img_task_accepted {
+  width: 100%;
 }
 
-/* line 70, ../sass/style.scss */
+/* line 95, ../sass/style.scss */
 .task_maps {
   padding: 3%;
-  display: inline-block;
   border: solid;
   border-color: lime;
   -moz-border-radius: 10px;
@@ -144,10 +164,10 @@ body {
   display: flex;
   -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-align-items: center;
-  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
 }
-/* line 82, ../sass/style.scss */
+/* line 107, ../sass/style.scss */
 .task_maps .task_map {
   padding: 5px;
   border: solid;
@@ -161,9 +181,12 @@ body {
   display: flex;
   -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-align-items: center;
   align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
 }
-/* line 96, ../sass/style.scss */
+/* line 125, ../sass/style.scss */
 .task_maps .task_map .task_map_title {
   margin: 3px;
   min-width: 80%;
@@ -173,47 +196,88 @@ body {
   font-weight: bold;
   font-variant: small-caps;
 }
-/* line 110, ../sass/style.scss */
-.task_maps .task_map .img_unclicked {
+/* line 140, ../sass/style.scss */
+.task_maps .task_map .task_card {
+  position: relative;
+  border: dashed;
   width: 40%;
   height: 40%;
-  opacity: 0.4;
   margin: 5px;
 }
-/* line 118, ../sass/style.scss */
-.task_maps .task_map .img_clicked {
-  width: 40%;
-  height: 40%;
+/* line 148, ../sass/style.scss */
+.task_maps .task_map .task_card .mark_in_progress {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: none;
+  font-size: 20px;
+  opacity: 0.6;
+}
+/* line 160, ../sass/style.scss */
+.task_maps .task_map .task_card .img_unclicked {
+  width: 100%;
+  height: 100%;
+  opacity: 0.4;
+  background-color: white;
+}
+/* line 169, ../sass/style.scss */
+.task_maps .task_map .task_card .img_clicked {
+  width: 100%;
+  height: 100%;
   opacity: 1.0;
-  margin: 5px;
 }
 
-/* line 129, ../sass/style.scss */
+/* line 183, ../sass/style.scss */
 .light_box {
-  min-width: 40%;
+  width: 40%;
   min-height: 40%;
   border: solid;
-  border-color: red;
+  border-color: #CCC;
+  background-color: #CCC;
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
   border-radius: 10px;
   padding: 5px;
   position: fixed;
-  z-index: 2;
+  z-index: 1001;
   margin: 5%;
   margin-left: 29%;
   display: none;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: right;
+  align-items: right;
 }
-/* line 149, ../sass/style.scss */
+/* line 205, ../sass/style.scss */
 .light_box .img_lightbox {
-  width: 60%;
+  position: relative;
+  min-width: 80%;
+  max-width: 100%;
+}
+/* line 212, ../sass/style.scss */
+.light_box #sect-lightbox-buttons {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  display: -webkit-flex;
+  -webkit-flex-direction: row;
+  display: flex;
+  flex-direction: row;
+}
+/* line 219, ../sass/style.scss */
+.light_box .btn_lightbox {
+  position: relative;
+  -webkit-flex: 1 0;
+  flex: 1 0;
+  min-width: 20%;
 }
 
-/* line 155, ../sass/style.scss */
+/* line 227, ../sass/style.scss */
 #light-box-bg {
   display: none;
   background-color: black;
-  z-index: 1;
+  z-index: 1000;
   position: fixed;
   top: 0;
   left: 0;
