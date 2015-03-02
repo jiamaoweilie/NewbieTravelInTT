@@ -34,6 +34,7 @@ var lightbox = {
 	        e.preventDefault();
 	        $("#sect-light-box").fadeOut("slow");
 	        $("#light-box-bg").fadeOut("slow");
+	        $("#btn-lightbox-accept").unbind();
 	        $(this).unbind();
 	    });
 	}
