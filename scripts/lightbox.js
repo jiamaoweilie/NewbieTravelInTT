@@ -3,12 +3,17 @@ var lightbox = {
 	openLightbox: function(taskMapImg) {
 		var yButton = $("#btn-lightbox-accept");
 		var nButton = $("#btn-lightbox-back");
-		var countTasksAccepted = $("#count-tasks-accepted").attr("value");
+		var countTasksAccepted = $("#info-tasks-accepted").attr("value");
+		var isAccepted = $(taskMapImg).attr("value");
+
+		$("#lb-task-type").html($(taskMapImg).parent().siblings(".task_map_title").text());
 
         $("#sect-light-box").fadeIn("slow");
         $("#light-box-bg").fadeIn("slow");
+        $(yButton).show();
+        $(nButton).show();
 
-        if ('3' === countTasksAccepted) {
+        if ( 'ACCEPTED' === isAccepted || '3' === countTasksAccepted) {
         	$(yButton).hide();
         };
 
@@ -23,7 +28,8 @@ var lightbox = {
 	        	if (0 === $(accepted_tasks[i]).children().length) {
 	        		$(accepted_tasks[i]).append('<img src="image/sample.jpg" alt="" class="img_task_accepted"/>');
 	        		countTasksAccepted = '' + (i + 1);
-	        		$("#count-tasks-accepted").attr("value", "" + (i + 1));
+	        		$("#info-tasks-accepted").attr("value", "" + (i + 1));
+	        		$(image.data).attr("value", "ACCEPTED");
 	        		break;
 	        	};
 	        }
