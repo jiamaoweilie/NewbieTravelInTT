@@ -126,7 +126,7 @@ body {
 
     .task_map_title {
       margin: 2%;
-      min-width: 80%;
+      width: 80%;
       max-width: 100%;
 
       text-align: left;
@@ -146,14 +146,16 @@ body {
       margin: 2%;
 
       .mark_in_progress {
+        top: 40%;
         width: 100%;
-        height: 100%;
+        height: 20%;
         position: absolute;
         display: none;
         font-size: 50px;
         color: #8B6;
         //opacity: 1;
         text-align: center;
+        z-index: 10;
       }
 
       .img_unclicked {

@@ -199,7 +199,7 @@ body {
 /* line 127, ../sass/style.scss */
 .task_maps .task_map .task_map_title {
   margin: 2%;
-  min-width: 80%;
+  width: 80%;
   max-width: 100%;
   text-align: left;
   font-family: "arial";
@@ -219,15 +219,17 @@ body {
 }
 /* line 148, ../sass/style.scss */
 .task_maps .task_map .task_card .mark_in_progress {
+  top: 40%;
   width: 100%;
-  height: 100%;
+  height: 20%;
   position: absolute;
   display: none;
   font-size: 50px;
   color: #8B6;
   text-align: center;
+  z-index: 10;
 }
-/* line 159, ../sass/style.scss */
+/* line 161, ../sass/style.scss */
 .task_maps .task_map .task_card .img_unclicked {
   width: 100%;
   height: 100%;
@@ -236,7 +238,7 @@ body {
   -webkit-flex: 1 0;
   flex: 1 0;
 }
-/* line 167, ../sass/style.scss */
+/* line 169, ../sass/style.scss */
 .task_maps .task_map .task_card .img_clicked {
   width: 100%;
   height: 100%;
@@ -245,7 +247,7 @@ body {
   flex: 1 0;
 }
 
-/* line 179, ../sass/style.scss */
+/* line 181, ../sass/style.scss */
 .light_box {
   width: 40%;
   height: 70%;
@@ -266,7 +268,7 @@ body {
   -webkit-justify-content: center;
   justify-content: center;
 }
-/* line 199, ../sass/style.scss */
+/* line 201, ../sass/style.scss */
 .light_box #lb-task-type {
   -webkit-flex: 1 0;
   flex: 1 0;
@@ -278,7 +280,7 @@ body {
   text-align: center;
   color: yellow;
 }
-/* line 211, ../sass/style.scss */
+/* line 213, ../sass/style.scss */
 .light_box #lb-task-img {
   -webkit-flex: 1 0;
   flex: 1 0;
@@ -289,7 +291,7 @@ body {
   width: 100%;
   height: 40%;
 }
-/* line 218, ../sass/style.scss */
+/* line 220, ../sass/style.scss */
 .light_box #lb-task-img .img_lightbox {
   position: relative;
   -webkit-flex: 1 0;
@@ -298,7 +300,7 @@ body {
   max-width: 60%;
   height: 100%;
 }
-/* line 227, ../sass/style.scss */
+/* line 229, ../sass/style.scss */
 .light_box #lb-task-description {
   -webkit-flex: 1 0;
   flex: 1 0;
@@ -309,7 +311,7 @@ body {
   color: white;
   text-align: center;
 }
-/* line 238, ../sass/style.scss */
+/* line 240, ../sass/style.scss */
 .light_box #lb-buttons {
   display: -webkit-flex;
   display: flex;
@@ -322,7 +324,7 @@ body {
   width: 100%;
   height: 10%;
 }
-/* line 246, ../sass/style.scss */
+/* line 248, ../sass/style.scss */
 .light_box #lb-buttons .btn_lightbox {
   display: box;
   position: relative;
@@ -332,7 +334,7 @@ body {
   height: 100%;
 }
 
-/* line 257, ../sass/style.scss */
+/* line 259, ../sass/style.scss */
 #light-box-bg {
   display: none;
   background-color: black;
