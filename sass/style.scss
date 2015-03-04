@@ -3,30 +3,94 @@
 @import "compass/layout";
 
 html {
-  width: 1913px;
-  height: 2576px;
+  
+  @include display-flex;
+  @include justify-content(center);
 }
 
 body {
+
   position: relative;
-  width: 100%;
-  height: 100%;
+  width: 1913px;
+  height: 2576px;
   
   font-size: 62.5%;
 
-  background-image: url(../image/main_page2.jpg);
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
+  //background-image: url(../image/mp2x.jpg);
+  //background-size: 100% 100%;
+  //background-repeat: no-repeat;
+}
+
+.banner {
+  @include display-flex;
+  position: absolute;
+  background-image: url(../image/header.png);
+  width: 100%;
+  height: 596px;
+  //@include flex-direction(vertical);
+  @include flex-wrap(wrap);
+  @include justify-content(center);
+  //@include align-items(center);
+
+  #newbie-camp-title {
+    position: relative;
+    top: 41%;
+    width: 90%;
+    height: 20%;
+    text-align: center;
+    font-family: verdana;
+    font-size: 63px;
+    font-weight: 600;
+    letter-spacing: 0px;
+    word-spacing: 0px;
+  }
+
+  #tw-logo {
+    position: relative;
+    //top: 100px;
+    margin-top: 6%;
+    width: 20%;
+    height: 18%;
+    border-top: solid;
+    border-bottom: solid;
+    border-color: white;
+    @include display-flex;
+    @include justify-content(center);
+
+    img {
+      position: relative;
+      width: 110%;
+      min-height: 110%;
+    }
+  }
+}
+
+.preface {
+  position: absolute;
+  top: 602px;
+  text-align: center;
+  color: rgb(239, 91, 161);
+  width: 100%;
+  font-family: sans-serif;
+  font-weight: 100;
+  font-size: 47px;
+  line-height: 100px;
+  letter-spacing: -2px;
+  word-spacing: 0px;
 }
 
 .information {
 
   position: relative;
-  top: 28.05%;
+  top: 722px;
+  border: solid;
+  border-color: rgb(38, 189, 207);
+  //#5BC;
+  @include border-radius(10px);
   padding: 0.5%;
-  margin-left: 5.9%;
-  margin-right: 6.3%;
-  height: 10.3%;
+  margin-left: 5.8%;
+  margin-right: 6.2%;
+  height: 10.1%;
 
   z-index: 1;
   
@@ -54,11 +118,11 @@ body {
     width: 16%;
     height: 100%;
 
-    font-family: "arial";
-    font-weight: bold;
+    font-family: sans-serif;
+    font-weight: 100;
     font-size: 47px;
     letter-spacing: 0px;
-    color: #8B6;
+    color: rgb(247, 143, 49);
     
     li{
       text-indent: 30px;
@@ -72,8 +136,14 @@ body {
 
   .tasks_accepted {
     position: relative;
+    border: dashed;
+    //border-weight: 1px;
+    border-color: rgb(137, 183, 127);
+    //padding: 0.1%;
+    @include border-radius(15px);
     margin: 0.4%;
-    margin-left: 1%;
+    margin-top: 0.3%;
+    margin-left: 0.8%;
     min-width: 45%;
     height: 95%;
     
@@ -86,15 +156,19 @@ body {
     
     .accepted_task {
       //@include flex(1 0);
+      @include display-flex;
       position: relative;
       //margin-right: 5%;
       width: 30%;
-      height: 100%;
+      height: 95%;
+      @include justify-content(center);
+      overflow: hidden;
+      vertical-align: middle;
     }
     .img_task_accepted {
-      @include flex(1 0);
+      //@include flex(1 0);
       position: relative;
-      width: 100%;
+      max-width: 100%;
       height: 100%;
     }
   }
@@ -115,6 +189,31 @@ body {
   @include justify-content(center);
   //@include flexbox((display: box));
 
+  .client {
+    color: rgb(247, 143, 49);
+    .task_card {
+      background-color: rgb(247, 143, 49);
+    }
+  }
+  .technical {
+    color: rgb(137, 183, 127);
+    .task_card {
+      background-color: rgb(137, 183, 127);
+    }
+  }
+  .process {
+    color: rgb(38, 189, 207);
+    .task_card {
+      background-color: rgb(38, 189, 207);
+    }
+  }
+  .communication {
+    color: rgb(239, 91, 161);
+    .task_card {
+      background-color: rgb(239, 91, 161);
+    }
+  }
+
   .task_map {
     //top: 10%;
     padding: 1.2%;
@@ -123,28 +222,54 @@ body {
     margin-left: 4.2%;
     margin-right: 5%;
     margin-top: 3.95%;
-    margin-bottom: 2.4%;
-    width: 37.4%;
-    height: 38.5%;
+    margin-bottom: 2.3%;
+    width: 37.1%;
+    height: 37.9%;
+
+    border: dashed;
+    @include border-radius(10px);
 
     @include display-flex;
     @include flex-wrap(wrap);
     @include align-items(flex-start);
     @include justify-content(center);
 
-    .task_map_title {
-      margin-left: 1%;
-      margin-right: 1%;
-      padding-top: 4%;
+    .task_map_header {
+      position: relative;
       width: 100%;
-      height: 12.5%;
+      height: 18%;
+      @include display-flex;
+      @include flex-wrap(unwrap);
+      @include align-items(flex-start);
+      @include justify-content(flex-start);
+      
+      .task_map_title {
+        //@include flex;
+        margin-left: 1%;
+        margin-right: 1%;
+        padding-top: 4%;
+        //width: 100%;
+        height: 12.5%;
 
-      text-align: left;
-      font-family: "arial";
-      font-size: 50px;
-      font-weight: bold;
-      font-variant: small-caps;
-      color: #8B6;
+        text-align: left;
+        font-family: "arial";
+        font-size: 50px;
+        font-weight: bold;
+        font-variant: small-caps;
+        color: inherit;
+      }
+
+      .task_map_icon {
+        position: relative;
+        width: 15%;
+        height: 90%;
+        //padding-bottom: 5%;
+
+        img {
+          //width: 15%;
+          height: 100%;
+        }
+      }
     }
 
     .task_card {
@@ -155,6 +280,9 @@ body {
       height: 81%;
       margin-left: 1%;
       margin-right: 1%;
+      vertical-align: middle;
+      display: table-cell;
+      overflow: hidden;
 
       .mark_in_progress {
         top: 40%;
@@ -163,15 +291,15 @@ body {
         position: absolute;
         display: none;
         font-size: 50px;
-        color: #8B6;
+        color: inherit;
         //opacity: 1;
         text-align: center;
         z-index: 10;
       }
 
       .img_unclicked {
-        width: 100%;
-        height: 100%;
+        max-width: 100%;
+        min-height: 100%;
         opacity: 0.4;
         background-color: white;
 
@@ -277,6 +405,14 @@ body {
   opacity: 0.6;
   width: 100%;
   height: 100%;
+}
+
+.footer {
+  background-image: url(../image/footer.png);
+  position: absolute;
+  top: 2448px;
+  width: 100%;
+  height: 128px;
 }
 
 

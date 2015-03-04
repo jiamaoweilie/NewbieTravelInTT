@@ -10,6 +10,13 @@
     <link href="stylesheets/style.css" type="text/css" rel="stylesheet" >
 </head>
 <body >
+    <div class="banner">
+        <div id="newbie-camp-title">Newbie Challenge</div>
+        <div id="tw-logo">
+            <img src="image/tw_logo_white.png">
+        </div>
+    </div>
+
     <!-- light box -->
     <section id="sect-light-box" class="light_box">
         <div id="lb-task-type"></div>
@@ -28,6 +35,8 @@
     <div id="light-box-bg"></div>
 
     <!-- newbie information -->
+    <div class="preface"><p>Let us start an amazing newbie journey with the awesome Game</p></div>
+
     <section id="sect-user-info" class="information">
         <div id="info-avatar" class="avatar">
             <img src="image/sample.jpg" alt="" class="img_avatar"/>
@@ -51,19 +60,29 @@
 
     <!-- task maps -->
     <section id="sect-task-maps" class="task_maps">
-        <section id="sect-project-taskmap" class="project task_map">
-            <span class="task_map_title">Client</span><br>
-            <div id="sect-taskcard-project1" class="task_card">
+        <section id="sect-client-taskmap" class="task_map client">
+            <div class="task_map_header">
+                <div class="task_map_title">Client</div>
+                <div class="task_map_icon">
+                    <img src="image/client.png">
+                </div>
+            </div>
+            <div id="sect-taskcard-client1" class="task_card">
                 <div class="mark_in_progress">Task in Progress</div>
                 <img src="image/sample.jpg" alt="" class="img_unclicked" value="NOT_ACCEPTED"/>
             </div>
-            <div id="sect-taskcard-project2" class="task_card">
+            <div id="sect-taskcard-client2" class="task_card">
                 <div class="mark_in_progress">Task in Progress</div>
                 <img src="image/sample.jpg" alt="" class="img_unclicked"  value="NOT_ACCEPTED"/>
             </div>
         </section>
-        <section id="sect-tech-taskmap"class="tech_map task_map">
-            <span class="task_map_title">Technical</span><br>
+        <section id="sect-tech-taskmap"class="task_map technical">
+            <div class="task_map_header">
+                <div class="task_map_title">Technical</div>
+                <div class="task_map_icon">
+                    <img src="image/Technical.png">
+                </div>
+            </div>
             <div id="sect-taskcard-tech1" class="task_card">
                 <div class="mark_in_progress">Task in Progress</div>
                 <img src="image/sample.jpg" alt="" class="img_unclicked" value="NOT_ACCEPTED"/>
@@ -73,19 +92,29 @@
                 <img src="image/sample.jpg" alt="" class="img_unclicked" value="NOT_ACCEPTED"/>
             </div>
         </section>
-        <section id="sect-process-taskmap" class="process_map task_map">
-            <span class="task_map_title">Process</span><br>
+        <section id="sect-process-taskmap" class="task_map process">
+            <div class="task_map_header">
+                <div class="task_map_title">Process</div>
+                <div class="task_map_icon">
+                    <img src="image/process.png">
+                </div>
+            </div>
             <div id="sect-taskcard-project1" class="task_card">
                 <div class="mark_in_progress">Task in Progress</div>
-                <img src="image/sample.jpg" alt="" class="img_unclicked" value="NOT_ACCEPTED"/>
+                <img src="image/jiukun.jpg" alt="" class="img_unclicked" value="NOT_ACCEPTED"/>
             </div>
             <div id="sect-taskcard-project2" class="task_card">
                 <div class="mark_in_progress">Task in Progress</div>
-                <img src="image/sample.jpg" alt="" class="img_unclicked" value="NOT_ACCEPTED"/>
+                <img src="image/jiukun.jpg" alt="" class="img_unclicked" value="NOT_ACCEPTED"/>
             </div>
         </section>
-        <section id="sec-comm-taskmap" class="communication_map task_map">
-            <span class="task_map_title">Communication</span><br>
+        <section id="sec-comm-taskmap" class="task_map communication">
+            <div class="task_map_header">
+                <div class="task_map_title">Communication</div>
+                <div class="task_map_icon">
+                    <img src="image/Communication.png">
+                </div>
+            </div>
             <div id="sect-taskcard-project1" class="task_card">
                 <div class="mark_in_progress">Task in Progress</div>
                 <img src="image/sample.jpg" alt="" class="img_unclicked" value="NOT_ACCEPTED"/>
@@ -96,6 +125,8 @@
             </div>
         </section>
     </section>
+
+    <div class="footer"></div>
 
     <!-- scripts -->
     <script type="text/javascript" src="/scripts/libs/jquery-2.1.3.js"></script>
